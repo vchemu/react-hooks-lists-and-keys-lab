@@ -1,20 +1,19 @@
 import React from "react";
+import ProjectList from "./ProjectList";
 
 
 function ProjectItem({ name, about, technologies }) {
-    const technologies = projects.technologies;
+  const projectTechnologies = technologies.map((technology) =>(
+    <span key={technology}>{technology}</span>
+  ));
     return (
       <div className="project-item">
         <h3>{name}</h3>
         <p>{about}</p>
-        <div className="technologies">
-          <span>{projectTechnologies}</span>
-        </div>
+        <div className="technologies">{projectTechnologies}</div>
       </div>
     );
   }
 
-  const projectTechnologies = technologies.map((technology) => {
-    <ProjectItem key={technologies} technologies={technologies} />;
-  });
+  
 export default ProjectItem;
